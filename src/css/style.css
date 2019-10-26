@@ -57,6 +57,31 @@ body {
     margin-bottom: 20px;
 }
 
+.valita {
+    position: relative;
+}
+
+.mark {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    height: 28px;
+    width: 28px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #ff0;
+    background: #222c41;
+    color: #ff0;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.view {
+    opacity: 1;
+}
+
 .valita input[type="checkbox"] {
     display: none;
 }
