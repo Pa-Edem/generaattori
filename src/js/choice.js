@@ -33,7 +33,7 @@ function isChecked(event) {
         let arraySuomenSanat = getSanatList(allArraysAddedGroup);
         // удаляем из финального массива слова этой группы
         removeUnCheckedGroup(arraySuomenSanat);
-        viewNumberSanat(gg);
+        viewNumberSanat(ggg);
     }
 }
 // получим все массивы слов нужной группы
@@ -168,7 +168,8 @@ function createFinalList(list) {
             }
         }
     });
-    viewNumberSanat(gg, list.length);
+
+    viewNumberSanat(ggg, list.length);
     hasOneGroup() ? uusiSata.disabled = false : uusiSata.disabled = true;
 
     // запишем выбранные слова в Хранилище
@@ -204,8 +205,8 @@ function hasOneGroup() {
     return false;
 }
 // выведем количество выбранных слов
-function viewNumberSanat(gg, val = '') {
-    let mark = document.querySelector(`.mark[data-key = ${gg}]`);
+function viewNumberSanat(ggg, val = '') {
+    let mark = document.querySelector(`.mark[data-key = ${ggg}]`);
     mark.textContent = val;
     val !== '' ? mark.classList.add('view') : mark.classList.remove('view');
 }
