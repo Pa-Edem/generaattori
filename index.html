@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lause generaattori</title>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+    <main class="main">
+        <div class="wrap">
+            <h3 class="title">Отметьте группы глаголов для тренировки</h3>
+            <div class="valita_group">
+                <div class="valita">
+                    <input type="checkbox" id="check1" data-key="g1" />
+                    <label for="check1">1</label>
+                </div>
+                <div class="valita">
+                    <input type="checkbox" id="check2" data-key="g2" />
+                    <label for="check2">2</label>
+                </div>
+                <div class="valita">
+                    <input type="checkbox" id="check3" data-key="g3" />
+                    <label for="check3">3</label>
+                </div>
+                <div class="valita">
+                    <input type="checkbox" id="check4" data-key="g4" />
+                    <label for="check4">4</label>
+                </div>
+                <div class="valita">
+                    <input type="checkbox" id="check5" data-key="g5" />
+                    <label for="check5">5</label>
+                </div>
+            </div>
+            <div class="example">
+                <span>minä puhun</span>
+                <span class="span">minä en puhu</span>
+                <span>puhunko minä</span>
+            </div>
+            <div class="kysymys">lause generaattori</div>
+            <div class="line">
+                <div class="auttaa">auttaa</div>
+                <div class="help">
+                    <div class="help-text"></div>
+                </div>
+            </div>
+            <div class="form">
+                <div class="vastaus">
+                    <input type="text" class="vastaus_input">
+                    <div class="btns">
+                        <button class="btn_A bb">ä</button>
+                        <button class="btn_O bb">ö</button>
+                    </div>
+                </div>
+                <div class="res">
+                    <button class="btn uusi" disabled>uusi sana</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-window">
+                <div class="modal-content">
+                    <!-- ? вывод слов для отбора -->
+                </div>
+                <div class="modal-footer">
+                    <input type="button" id="btn-reset" value="RESET" class="modal-btn red">
+                    <input type="button" id="btn-all" value="ALL" class="modal-btn green">
+                    <div class="spacer"></div>
+                    <input type="button" id="btn-ok" value="OK" class="modal-btn">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./src/js/data.js"></script>
+    <script src="./src/js/choice.js"></script>
+    <script src="./src/js/helpers.js"></script>
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>
