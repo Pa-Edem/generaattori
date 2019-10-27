@@ -66,6 +66,7 @@ function getSanatFromLS(gg) {
 // выведем на экран список слов выбранной группы
 function viewSanatFromList(listLS, list, parent) {
     let html = '';
+    list.sort();
     for (let i = 0; i < list.length; i++) {
         if (listLS.length > 0) {
             if (listLS.includes(list[i])) {
