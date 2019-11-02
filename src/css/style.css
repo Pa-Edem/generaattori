@@ -284,6 +284,7 @@ body {
 .btn:disabled {
     background-color: #39496b;
     color: #2a354e;
+    border: 1px solid #678;
 }
 
 .btn:disabled:hover {
