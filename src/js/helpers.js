@@ -321,41 +321,44 @@ function frontKpt(kpt) {
     }
 
     if (kpt.length === 2) {
-        // точное соответствие
-        switch (kpt) {
-            case kptVahva[3]:
-                correct = kptHeikko[3];
-                break;
-            case kptVahva[4]:
-                correct = kptHeikko[4];
-                break;
-            case kptVahva[5]:
-                correct = kptHeikko[5];
-                break;
-            case kptVahva[6]:
-                correct = kptHeikko[6];
-                break;
-            case kptVahva[7]:
-                correct = kptHeikko[7];
-                break;
-            case kptVahva[8]:
-                correct = kptHeikko[8];
-                break;
-            case kptVahva[9]:
-                correct = kptHeikko[9];
-                break;
-            case kptVahva[10]:
-                correct = kptHeikko[10];
-                break;
-        }
 
-        // если первая буква другая, а вторая k, p или t
-        let x = kpt.slice(0, 1);
-        let xx = kpt.slice(-1);
-        if (x !== 'k' && x !== 'p' && x !== 't') {
-            if (xx === 'k' || xx === 'p' || xx === 't') {
-                let idxx = kptVahva.indexOf(xx);
-                correct = x + kptHeikko[idxx];
+        if (kptVahva.includes(kpt)) {
+            // точное соответствие
+            switch (kpt) {
+                case kptVahva[3]:
+                    correct = kptHeikko[3];
+                    break;
+                case kptVahva[4]:
+                    correct = kptHeikko[4];
+                    break;
+                case kptVahva[5]:
+                    correct = kptHeikko[5];
+                    break;
+                case kptVahva[6]:
+                    correct = kptHeikko[6];
+                    break;
+                case kptVahva[7]:
+                    correct = kptHeikko[7];
+                    break;
+                case kptVahva[8]:
+                    correct = kptHeikko[8];
+                    break;
+                case kptVahva[9]:
+                    correct = kptHeikko[9];
+                    break;
+                case kptVahva[10]:
+                    correct = kptHeikko[10];
+                    break;
+            }
+        } else {
+            // если первая буква другая, а вторая k, p или t
+            let x = kpt.slice(0, 1);
+            let xx = kpt.slice(-1);
+            if (x !== 'k' && x !== 'p' && x !== 't') {
+                if (xx === 'k' || xx === 'p' || xx === 't') {
+                    let idxx = kptVahva.indexOf(xx);
+                    correct = x + kptHeikko[idxx];
+                }
             }
         }
     }
