@@ -353,7 +353,7 @@ function frontKpt(kpt) {
         let x = kpt.slice(0, 1);
         let xx = kpt.slice(-1);
         if (x !== 'k' && x !== 'p' && x !== 't') {
-            if (x === 'k' || x === 'p' || x === 't') {
+            if (xx === 'k' || xx === 'p' || xx === 't') {
                 let idxx = kptVahva.indexOf(xx);
                 correct = x + kptHeikko[idxx];
             }
