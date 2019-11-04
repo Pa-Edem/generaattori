@@ -3,6 +3,9 @@ let loading = true,
     kysymys = null,
     vastaus = null,
     auttaa = null,
+    result = null,
+    count = 0,
+    win = 0,
     help = null,
     kirO = null,
     kirA = null,
@@ -27,7 +30,8 @@ function goApp() {
         counter++;
         loading = !loading;
     } else {
-        checkWord();
+        count++;
+        checkWord(count);
     }
 }
 
@@ -49,7 +53,7 @@ function setTextContent(mode) {
     kysymys.textContent = textRus;
 }
 
-function checkWord() {
+function checkWord(count) {
     loading = !loading;
     let textInput = vastaus.value.toLowerCase();
     if (textInput.slice(-1) === '?') {
@@ -58,12 +62,14 @@ function checkWord() {
 
     if (textInput.trim() === textFin.slice(0, -2).trim()) {
         vastaus.classList.add('win');
+        win++;
     } else {
         if (kysymys.textContent !== 'lause generaattori') {
             vastaus.classList.add('lose');
             help.textContent = textFin;
         }
     }
+    result.textContent = ((win / count) * 100).toFixed(1) + ' %';
 }
 
 function inA() {
@@ -99,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
     vastaus = document.querySelector('.vastaus_input');
     help = document.querySelector('.help-text');
     auttaa = document.querySelector('.auttaa');
+    result = document.querySelector('.result');
     kirO = document.querySelector('.btn_O');
     kirO.addEventListener('click', inO);
     kirA = document.querySelector('.btn_A');

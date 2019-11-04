@@ -198,6 +198,18 @@ body {
     text-align: center;
 }
 
+.result {
+    border: 1px solid #acd;
+    border-radius: 8px;
+    height: 60px;
+    width: 120px;
+    font-size: 16px;
+    line-height: 60px;
+    padding: 0 1rem;
+    color: #acd;
+    text-align: center;
+}
+
 .form {
     width: 80%;
 }
